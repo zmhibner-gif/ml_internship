@@ -122,17 +122,25 @@ These recommendations are therefore decision-support, not automatic instructions
 
 ## 8. Reproducibility
 
-The exact commands to re-run everything from a fresh clone, your random seeds, and your
-environment (`pip freeze` highlights or `requirements.txt` deltas). If you claim a sealed or
-holdout evaluation, two things must be committed: the cell/script that builds the sealed
-frame, and the metrics file it produced — "evaluated once, blind" should be checkable from
-your repo, not taken on faith.
+The complete analysis is contained in work/notebooks/capstone.ipynb. The notebook rebuilds the March 2026 feature frame directly from the FlyRank Hugging Face warehouse and can be run from top to bottom in Google Colab.
+
+From a fresh clone, the repository environment can be installed with:
+
+git clone https://github.com/zmhibner-gif/ml_internship.git
+cd ml_internship
+pip install -r requirements.txt
+
+To rerun the capstone, open work/notebooks/capstone.ipynb in Google Colab, add an authorized Hugging Face read token as the HF_TOKEN Colab secret, and select Runtime → Run all. The token is never stored in the notebook or repository.
+
+The analysis uses a fixed random seed of 42 for the client-grouped train/test split, K-Means, and sampled silhouette calculations. K-Means uses n_init=10, and 20% of clients are held out for testing. The scaler is fitted on the training data only and then applied to the held-out test data.
+
+The committed file work/outputs/capstone_metrics.json records the main evaluation settings and results, including the selected number of clusters and the held-out model and baseline silhouette scores.
+
+Environment: the main package versions used in the final run are recorded in the executed capstone notebook.
 
 ## 9. Acknowledgments & data credit
 
-One short section at the bottom of the deployed paper: "Built on the FlyRank ML Internship
-dataset" **linking to https://flyrank.ai**. Crediting your data source is standard research
-practice — and it's on the capstone's required-section list, so a paper without it isn't done.
+Built on the FlyRank ML Internship dataset.
 
 ---
 
