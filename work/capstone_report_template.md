@@ -1,9 +1,9 @@
-# Capstone Report — <Structured Content Archetype Clustering>
+# Capstone Report — <your lane>
 
-- **Author:** Zuzanna Hibner
-- **Lane:** Structured Content Archetype Clustering
-- **Repo:** https://github.com/zmhibner-gif/ml_internship
-- **Date:** August 2026
+- **Author:** 
+- **Lane:** 
+- **Repo:** 
+- **Date:** 
 
 > Copy this file to `work/capstone_report.md` and fill it in as you build. Sections 1–8
 > mirror the Pass / Needs-Work rubric axes, so nothing here is optional. Sections 0 and 9
