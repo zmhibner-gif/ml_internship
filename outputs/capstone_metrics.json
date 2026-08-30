@@ -1,0 +1,12 @@
+{
+  "random_seed": 42,
+  "split": "GroupShuffleSplit by client",
+  "test_size": 0.2,
+  "train_pages": 138310,
+  "test_pages": 38428,
+  "selected_k": 4,
+  "train_silhouette_k4": 0.407,
+  "test_silhouette_kmeans": 0.377,
+  "test_silhouette_baseline": 0.215,
+  "baseline_flagged_test_pages": 14938
+}
